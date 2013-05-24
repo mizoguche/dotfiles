@@ -108,6 +108,13 @@ NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree' "ファイラー
 NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディング
+NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
+NeoBundle 'skwp/vim-rspec'
+NeoBundle 'tpope/vim-rails' " 
+NeoBundle 'taichouchou2/vim-endwise' " 
+NeoBundle 'tomtom/tcomment_vim' " コメントアウトのトグル
+NeoBundle 'basyura/unite-rails' " 
+NeoBundle 'm2ym/rsense' " 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on     " required!
