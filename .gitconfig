@@ -12,3 +12,5 @@
 [core]
     editor = vim -c \"set fenc=utf-8\"
     quotepath = false
+[http]
+      sslVerify = false
