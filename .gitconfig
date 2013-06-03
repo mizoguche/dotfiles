@@ -14,3 +14,5 @@
     quotepath = false
 [http]
       sslVerify = false
+[push]
+	default = simple
