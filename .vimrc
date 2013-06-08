@@ -115,6 +115,8 @@ NeoBundle 'taichouchou2/vim-endwise' "
 NeoBundle 'tomtom/tcomment_vim' " コメントアウトのトグル
 NeoBundle 'basyura/unite-rails' " 
 NeoBundle 'm2ym/rsense' " 
+NeoBundle 'hail2u/vim-css3-syntax' " 
+NeoBundle 'groenewege/vim-less' " 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on     " required!
