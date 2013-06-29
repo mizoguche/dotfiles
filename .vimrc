@@ -114,6 +114,8 @@ NeoBundle 'tomtom/tcomment_vim' " コメントアウトのトグル
 NeoBundle 'basyura/unite-rails' " 
 NeoBundle 'm2ym/rsense' " 
 NeoBundle 'tpope/vim-fugitive' " 
+NeoBundle 'hail2u/vim-css3-syntax' " 
+NeoBundle 'groenewege/vim-less' " 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on     " required!
@@ -122,4 +124,3 @@ syntax on
 
 " ステータスラインに現在のブランチを表示
 set statusline+=%{fugitive#statusline()}
-
