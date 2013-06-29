@@ -84,8 +84,6 @@ set hlsearch
 set wildmenu
 
 
-
-
 "unite.vim
 set nocompatible               " be iMproved
 filetype off
@@ -115,8 +113,13 @@ NeoBundle 'taichouchou2/vim-endwise' "
 NeoBundle 'tomtom/tcomment_vim' " コメントアウトのトグル
 NeoBundle 'basyura/unite-rails' " 
 NeoBundle 'm2ym/rsense' " 
+NeoBundle 'tpope/vim-fugitive' " 
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on     " required!
 filetype indent on
 syntax on
+
+" ステータスラインに現在のブランチを表示
+set statusline+=%{fugitive#statusline()}
+
