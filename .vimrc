@@ -1,7 +1,3 @@
-"
-"source /Users/username/Dropbox/.vimrc
-"mkdir ~/vimbackup
-"
 "----------------------------------------------------------
 " 文字コードの指定
 set enc=utf-8
@@ -83,14 +79,12 @@ set hlsearch
 "wildmenu
 set wildmenu
 
-
 "unite.vim
-set nocompatible               " be iMproved
-filetype off
+set nocompatible              " be iMproved
 
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#rc(expand('~/.vim/bundle/'))
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
 " originalrepos on github
@@ -116,11 +110,17 @@ NeoBundle 'm2ym/rsense' "
 NeoBundle 'tpope/vim-fugitive' " 
 NeoBundle 'hail2u/vim-css3-syntax' " 
 NeoBundle 'groenewege/vim-less' " 
-""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
+
+"gist.vim
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
 
 filetype plugin indent on     " required!
 filetype indent on
 syntax on
 
 " ステータスラインに現在のブランチを表示
-set statusline+=%{fugitive#statusline()}
+set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set laststatus=2
