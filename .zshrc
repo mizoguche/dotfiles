@@ -1,14 +1,11 @@
 autoload colors
 colors
 
-# ------------------------------
-# General Settings
-# ------------------------------
 export EDITOR=vim        # エディタをvimに設定
 export LANG=ja_JP.UTF-8  # 文字コードをUTF-8に設定
 export KCODE=u           # KCODEにUTF-8を設定
 export AUTOFEATURE=true  # autotestでfeatureを動かす
-
+bindkey -v               # vi風バインディング
 
 PROMPT="
 %{${fg[green]}%}[%d]%{${reset_color}%}
@@ -17,63 +14,51 @@ PROMPT2="> "
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && PROMPT="%{${fg[red]}%}${PROMPT}%{${reset_color}%}"
 SPROMPT="%B%r is correct? [Yes, No, About, Edit]:%b "
 
-# auto change directory
-#
+# cd って打たなくてもディレクトリ名入れるだけでcdする
 setopt auto_cd
 
-# auto directory pushd that you can get dirs list by cd -[tab]
-#
+# you can get dirs list by cd -[tab]
 setopt auto_pushd
+setopt pushd_ignore_dups  # 重複を無視する
+
+# rm * を実行時に確認
+setopt rmstar_wait
 
 # command correct edition before each completion attempt
-#
 setopt correct
-
-# compacked complete list display
-#
-setopt list_packed
-
 # no remove postfix slash of command line
-#
 setopt noautoremoveslash
 
 # no beep sound when complete list displayed
-#
 setopt nolistbeep
 
 # すべてのバックグラウンドジョブを低優先度で実行を解除
 unsetopt bg_nice
 
+# historyの設定
 # historical backward/forward search with linehead string binded to ^P/^N
-#
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
-bindkey "\\ep" history-beginning-search-backward-end
-bindkey "\\en" history-beginning-search-forward-end
 
-## Command history configuration
-#
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt hist_ignore_dups # ignore duplication command history list
-setopt share_history # share command history data
 setopt extended_history   # ヒストリに実行時間も保存する
 setopt hist_ignore_dups   # 直前と同じコマンドはヒストリに追加しない
 setopt share_history      # 他のシェルのヒストリをリアルタイムで共有する
 setopt hist_reduce_blanks # 余分なスペースを削除してヒストリに保存する
 
 ## Completion configuration
-#
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' verbose true
+
 autoload -U compinit
 setopt auto_list               # 補完候補を一覧で表示する(d)
 setopt auto_menu               # 補完キー連打で補完候補を順に表示する(d)
@@ -83,74 +68,8 @@ bindkey "^[[Z" reverse-menu-complete  # Shift-Tabで補完候補を逆順する(
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # 補完時に大文字小文字を区別しない
 compinit -u
 
-## terminal configuration
-#
-unset LSCOLORS
-case "${TERM}" in
-xterm)
-  export TERM=xterm-color
-  ;;
-kterm)
-  export TERM=kterm-color
-  # set BackSpace control character
-  stty erase
-  ;;
-cons25)
-  unset LANG
-  export LSCOLORS=ExFxCxdxBxegedabagacad
-  export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-  zstyle ':completion:*' list-colors \
-    'di=;34;1' 'ln=;35;1' 'so=;32;1' 'ex=31;1' 'bd=46;34' 'cd=43;34'
-  ;;
-esac
-
-# set terminal title including current directory
-#
-case "${TERM}" in
-kterm*|xterm*)
-  precmd() {
-    echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
-  }
-  export LSCOLORS=exfxcxdxbxegedabagacad
-  export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-  zstyle ':completion:*' list-colors \
-    'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-  ;;
-esac
-
-
-# 解凍 http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
-function extract () {
-  if [ -f $1 ] ; then
-      case $1 in
-          *.tar.bz2)   tar xvjf $1    ;;
-          *.tar.gz)    tar xvzf $1    ;;
-          *.tar.xz)    tar xvJf $1    ;;
-          *.bz2)       bunzip2 $1     ;;
-          *.rar)       unrar x $1     ;;
-          *.gz)        gunzip $1      ;;
-          *.tar)       tar xvf $1     ;;
-          *.tbz2)      tar xvjf $1    ;;
-          *.tgz)       tar xvzf $1    ;;
-          *.zip)       unzip $1       ;;
-          *.Z)         uncompress $1  ;;
-          *.7z)        7z x $1        ;;
-          *.lzma)      lzma -dv $1    ;;
-          *.xz)        xz -dv $1      ;;
-          *)           echo "don't know how to extract '$1'..." ;;
-      esac
-  else
-      echo "'$1' is not a valid file!"
-  fi
-}
-
-alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz,lzma,tbz2,rar}=extract
-
-[ -f ~/dotfiles/.zsh/.zshrc.alias ] && source ~/dotfiles/.zsh/.zshrc.alias
-[ -f ~/dotfiles/.zsh/.zshrc.export ] && source ~/dotfiles/.zsh/.zshrc.export
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
 # vcs_info 設定
+# http://qiita.com/mollifier/items/8d5a627d773758dd8078
 
 RPROMPT=""
 
@@ -254,7 +173,7 @@ if is-at-least 4.3.11; then
 
         if [[ "$ahead" -gt 0 ]]; then
             # misc (%m) に追加
-            hook_com[misc]+="(p${ahead})"
+            hook_com[misc]+="(ahead:${ahead})"
         fi
     }
 
@@ -279,7 +198,7 @@ if is-at-least 4.3.11; then
 
         if [[ "$nomerged" -gt 0 ]] ; then
             # misc (%m) に追加
-            hook_com[misc]+="(m${nomerged})"
+            hook_com[misc]+="(nomerged:${nomerged})"
         fi
     }
 
@@ -297,7 +216,7 @@ if is-at-least 4.3.11; then
         stash=$(command git stash list 2>/dev/null | wc -l | tr -d ' ')
         if [[ "${stash}" -gt 0 ]]; then
             # misc (%m) に追加
-            hook_com[misc]+=":S${stash}"
+            hook_com[misc]+="(stash:${stash})"
         fi
     }
 
