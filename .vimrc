@@ -117,6 +117,11 @@ NeoBundle 'mattn/gist-vim'
 let g:gist_show_privates = 1
 let g:gist_post_private = 1
 
+" 補完のポップアップの色
+hi Pmenu ctermbg=darkblue
+hi PmenuSel ctermbg=darkcyan
+hi PmenuSbar ctermbg=0
+
 filetype plugin indent on     " required!
 filetype indent on
 syntax on
