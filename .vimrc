@@ -118,6 +118,7 @@ NeoBundle 'hail2u/vim-css3-syntax' "
 NeoBundle 'groenewege/vim-less' " 
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
+NeoBundle 'YankRing.vim' " PしたあとにC-P, C-Nでヤンクの履歴をたどれる
 
 "gist.vim
 let g:gist_show_privates = 1
@@ -127,6 +128,11 @@ let g:gist_post_private = 1
 hi Pmenu ctermbg=darkblue
 hi PmenuSel ctermbg=darkcyan
 hi PmenuSbar ctermbg=0
+
+"YankRingのShowコマンドの設定
+nnoremap <silent> <F7> :YRShow<CR>
+let g:yankring_max_history = 15
+let g:yankring_window_height = 13
 
 filetype plugin indent on     " required!
 filetype indent on
