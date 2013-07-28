@@ -139,5 +139,7 @@ filetype indent on
 syntax on
 
 " ステータスラインに現在のブランチを表示
-set statusline+=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
+au InsertEnter * hi StatusLine guifg=white guibg=darkblue gui=none ctermfg=white ctermbg=darkblue cterm=none
+au InsertLeave * hi StatusLine guifg=white guibg=darkgray gui=none ctermfg=white ctermbg=darkgray cterm=none
