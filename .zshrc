@@ -249,3 +249,13 @@ function _update_vcs_info_msg() {
     RPROMPT="$prompt"
 }
 add-zsh-hook precmd _update_vcs_info_msg
+
+# rbenv rehash after gem installed
+function gem(){
+    $HOME/.rbenv/shims/gem $*
+    if [ "$1" = "install" ] || [ "$1" = "i" ] || [ "$1" = "uninstall" ] || [ "$1" = "uni" ]
+    then
+        rbenv rehash
+        rehash
+    fi
+}
