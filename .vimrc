@@ -119,6 +119,10 @@ NeoBundle 'groenewege/vim-less' "
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'YankRing.vim' " PしたあとにC-P, C-Nでヤンクの履歴をたどれる
+NeoBundle 'plasticboy/vim-markdown' 
+
+" markdownで項目をfoldしない
+let g:vim_markdown_folding_disabled=1
 
 "gist.vim
 let g:gist_show_privates = 1
