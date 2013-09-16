@@ -96,9 +96,8 @@ endif
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
-NeoBundle 'VimClojure'
-NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
@@ -114,15 +113,25 @@ NeoBundle 'tomtom/tcomment_vim' " コメントアウトのトグル
 NeoBundle 'basyura/unite-rails' " 
 NeoBundle 'm2ym/rsense' " 
 NeoBundle 'tpope/vim-fugitive' " 
-NeoBundle 'hail2u/vim-css3-syntax' " 
-NeoBundle 'groenewege/vim-less' " 
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'YankRing.vim' " PしたあとにC-P, C-Nでヤンクの履歴をたどれる
 NeoBundle 'plasticboy/vim-markdown' 
+NeoBundle 'glidenote/memolist.vim' " :MemoNew, :MemoListとかでメモる
 
 " markdownで項目をfoldしない
 let g:vim_markdown_folding_disabled=1
+
+" HTML5
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'open-browser.vim'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'tell-k/vim-browsereload-mac'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'groenewege/vim-less' " 
+NeoBundle 'taichouchou2/html5.vim'
+NeoBundle 'taichouchou2/vim-javascript' " jQuery syntax追加
+NeoBundle 'kchmck/vim-coffee-script'
 
 "gist.vim
 let g:gist_show_privates = 1
@@ -147,3 +156,30 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2
 au InsertEnter * hi StatusLine guifg=white guibg=darkblue gui=none ctermfg=white ctermbg=darkblue cterm=none
 au InsertLeave * hi StatusLine guifg=white guibg=darkgray gui=none ctermfg=white ctermbg=darkgray cterm=none
+
+ 
+"----------------------------------------
+" open-browsere
+"----------------------------------------
+" カーソル下のURLをブラウザで開く
+nmap <Leader>o <Plug>(openbrowser-open)
+vmap <Leader>o <Plug>(openbrowser-open)
+" ググる
+nnoremap <Leader>g :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>
+ 
+ 
+"----------------------------------------
+" vim-browsereload-mac
+"----------------------------------------
+" リロード後に戻ってくるアプリ 変更してください
+let g:returnApp = "iTerm"
+nmap <Space>bc :ChromeReloadStart<CR>
+nmap <Space>bC :ChromeReloadStop<CR>
+nmap <Space>bf :FirefoxReloadStart<CR>
+nmap <Space>bF :FirefoxReloadStop<CR>
+nmap <Space>bs :SafariReloadStart<CR>
+nmap <Space>bS :SafariReloadStop<CR>
+nmap <Space>bo :OperaReloadStart<CR>
+nmap <Space>bO :OperaReloadStop<CR>
+nmap <Space>ba :AllBrowserReloadStart<CR>
+nmap <Space>bA :AllBrowserReloadStop<CR>
