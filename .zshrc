@@ -259,3 +259,14 @@ function gem(){
         rehash
     fi
 }
+
+
+# gibo の補完
+_gibo()
+{
+    local_repo="$HOME/.gitignore-boilerplates"
+    if [ -e "$local_repo" ]; then
+        compadd -M 'm:{[:lower:]}={[:upper:]}' $( find "$local_repo" -name "*.gitignore" -exec basename \{\} .gitignore \; )
+    fi
+}
+compdef _gibo gibo
