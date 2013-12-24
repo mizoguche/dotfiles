@@ -119,11 +119,7 @@ NeoBundle 'tpope/vim-fugitive' "
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'YankRing.vim' " PしたあとにC-P, C-Nでヤンクの履歴をたどれる
-NeoBundle 'plasticboy/vim-markdown' 
 NeoBundle 'glidenote/memolist.vim' " :MemoNew, :MemoListとかでメモる
-
-" markdownで項目をfoldしない
-let g:vim_markdown_folding_disabled=1
 
 " HTML5
 NeoBundle 'mattn/emmet-vim'
@@ -133,8 +129,23 @@ NeoBundle 'tell-k/vim-browsereload-mac'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less' " 
 NeoBundle 'taichouchou2/html5.vim'
-NeoBundle 'taichouchou2/vim-javascript' " jQuery syntax追加
+"NeoBundle 'taichouchou2/vim-javascript' " jQuery syntax追加
 NeoBundle 'kchmck/vim-coffee-script'
+
+"NeoBundle 'plasticboy/vim-markdown' 
+" markdownで項目をfoldしない
+"let g:vim_markdown_folding_disabled=1
+" markdown viewer
+" 事前に下記を実行しとく
+"
+" $ brew install nodejs
+" $ gem install redcarpet pygments.rb
+" $ npm -g install instant-markdown-d
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'suan/vim-instant-markdown'
+filetype plugin on
+" you need this for zsh   
+set shell=bash\ -i
 
 let g:user_emmet_settings = {
   \  'lang' : 'ja',
