@@ -47,6 +47,7 @@ cask install google-drive
 cask install xtrafinder
 cask install sophos-antivirus
 cask install dropbox
+cask install genymotion
 
 tap homebrew/versions 
 
