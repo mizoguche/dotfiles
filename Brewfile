@@ -48,6 +48,7 @@ cask install xtrafinder
 cask install sophos-antivirus
 cask install dropbox
 cask install genymotion
+cask install skype
 
 tap homebrew/versions 
 
