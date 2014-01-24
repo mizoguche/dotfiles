@@ -121,6 +121,8 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'YankRing.vim' " PしたあとにC-P, C-Nでヤンクの履歴をたどれる
 NeoBundle 'glidenote/memolist.vim' " :MemoNew, :MemoListとかでメモる
 
+NeoBundle 'editorconfig/editorconfig-vim'
+
 " HTML5
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'open-browser.vim'
