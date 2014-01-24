@@ -49,6 +49,7 @@ cask install sophos-antivirus
 cask install dropbox
 cask install genymotion
 cask install skype
+cask install thunderbird
 
 tap homebrew/versions 
 
