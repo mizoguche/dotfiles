@@ -109,12 +109,25 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree' "ファイラー
 NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディング
 NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
+
+" ruby
 NeoBundle 'skwp/vim-rspec'
 NeoBundle 'tpope/vim-rails' " 
+NeoBundle 'basyura/unite-rails' " 
+NeoBundle 'bronson/vim-runtest' " 
+
+NeoBundle 'taichouchou2/vim-rsense' " 
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:rsenseUseOmniFunc = 1
+if filereadable( expand('~/.vim/opt/rsense-0.3/bin/rsense') )
+  let g:rsenseHome = expand('~/.vim/opt/rsense-0.3')
+  let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+endif
+
 NeoBundle 'taichouchou2/vim-endwise' " 
 NeoBundle 'tomtom/tcomment_vim' " コメントアウトのトグル
-NeoBundle 'basyura/unite-rails' " 
-NeoBundle 'm2ym/rsense' " 
 NeoBundle 'tpope/vim-fugitive' " 
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
@@ -145,6 +158,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 " $ npm -g install instant-markdown-d
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'suan/vim-instant-markdown'
+
+
 filetype plugin on
 " you need this for zsh   
 set shell=bash\ -i

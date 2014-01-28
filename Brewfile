@@ -25,6 +25,7 @@ install zsh
 install zsh-completions
 install android-sdk
 install vim
+install rsense
 
 
 # homebrew-caskのインストール
