@@ -26,7 +26,7 @@ install zsh-completions
 install android-sdk
 install vim
 install rsense
-
+install ag
 
 # homebrew-caskのインストール
 tap phinze/homebrew-cask
@@ -52,6 +52,7 @@ cask install genymotion
 cask install skype
 cask install thunderbird
 cask install sourcetree
+cask install appcleaner
 
 tap homebrew/versions 
 
