@@ -51,6 +51,7 @@ cask install dropbox
 cask install genymotion
 cask install skype
 cask install thunderbird
+cask install sourcetree
 
 tap homebrew/versions 
 
