@@ -120,8 +120,8 @@ vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
-NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'scrooloose/syntastic'
+
+NeoBundle 'scrooloose/syntastic' "構文エラーチェック
 NeoBundle 'scrooloose/nerdtree' "ファイラー
 NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディング
 NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
@@ -132,7 +132,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'janx/vim-rubytest' " \ t でカーソル位置のテストを実行、 \ T でバッファ内のすべてのテストを実行、 \ l で最後に実行したテストを実行
 
-NeoBundle 'taichouchou2/vim-rsense' " 
+NeoBundle 'taichouchou2/vim-rsense' "Rubyの補完
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
@@ -142,8 +142,8 @@ if filereadable( expand('~/.vim/opt/rsense-0.3/bin/rsense') )
   let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 endif
 
-NeoBundle 'taichouchou2/vim-endwise' " 
-NeoBundle 'tomtom/tcomment_vim' " コメントアウトのトグル
+NeoBundle 'taichouchou2/vim-endwise' " rubyとかで自動的にendを入れてくれる
+NeoBundle 'tomtom/tcomment_vim' " <c-_><c-_> でコメントアウトのトグル
 NeoBundle 'tpope/vim-fugitive' " 
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
@@ -155,7 +155,6 @@ NeoBundle 'editorconfig/editorconfig-vim'
 " HTML5
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'open-browser.vim'
-NeoBundle 'mattn/webapi-vim'
 NeoBundle 'tell-k/vim-browsereload-mac'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less' " 
