@@ -112,9 +112,9 @@ NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
 
 " ruby
 NeoBundle 'skwp/vim-rspec'
-NeoBundle 'tpope/vim-rails' " 
-NeoBundle 'basyura/unite-rails' " 
-NeoBundle 'bronson/vim-runtest' " 
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'basyura/unite-rails'
+NeoBundle 'janx/vim-rubytest' " \ t でカーソル位置のテストを実行、 \ T でバッファ内のすべてのテストを実行、 \ l で最後に実行したテストを実行
 
 NeoBundle 'taichouchou2/vim-rsense' " 
 if !exists('g:neocomplcache_omni_patterns')
