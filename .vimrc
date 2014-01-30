@@ -82,9 +82,6 @@ set wildmenu
 "ESC２回押しで検索ハイライトを消去
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
-"Ctrl+nでNERDTreeをトグル
-map <C-l> :NERDTreeToggle<CR>
-
 "----------------------------------------------------------
 " プラグイン
 "----------------------------------------------------------
@@ -98,11 +95,22 @@ endif
 
 " originalrepos on github
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+  \ }
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
 
 NeoBundle 'Shougo/unite.vim'
+
+"Ctrl+lでUnite file
+map <C-l> :Unite file<CR>
+
 "" unite-grep {{{
 " unite-grepのバックエンドをagに切り替える
 " http://qiita.com/items/c8962f9325a5433dc50d
@@ -122,7 +130,6 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 
 NeoBundle 'scrooloose/syntastic' "構文エラーチェック
-NeoBundle 'scrooloose/nerdtree' "ファイラー
 NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディング
 NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
 
