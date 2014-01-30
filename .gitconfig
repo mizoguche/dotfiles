@@ -20,3 +20,7 @@
     sslVerify = false
 [push]
     default = simple
+[github]
+	user = mizoguche
+[merge]
+	tool = opendiff
