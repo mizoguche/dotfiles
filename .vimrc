@@ -154,8 +154,21 @@ NeoBundle 'tomtom/tcomment_vim' " <c-_><c-_> でコメントアウトのトグ�
 NeoBundle 'tpope/vim-fugitive' " 
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
-NeoBundle 'YankRing.vim' " PしたあとにC-P, C-Nでヤンクの履歴をたどれる
 NeoBundle 'glidenote/memolist.vim' " :MemoNew, :MemoListとかでメモる
+
+" yankround
+NeoBundle 'LeafCage/yankround.vim'
+NeoBundle 'kien/ctrlp.vim'
+"" キーマップ
+nmap p <Plug>(yankround-p)
+nmap P <Plug>(yankround-P)
+nmap <C-p> <Plug>(yankround-prev)
+nmap <C-n> <Plug>(yankround-next)
+"" 履歴取得数
+let g:yankround_max_history = 1000
+""履歴一覧(kien/ctrlp.vim)
+nnoremap <C-p> :Unite yankround<CR>
+nnoremap gg gg "" ggで先頭行に戻りたいけどyankroundが邪魔をしている
 
 NeoBundle 'editorconfig/editorconfig-vim'
 
@@ -208,11 +221,6 @@ let g:gist_post_private = 1
 hi Pmenu ctermbg=darkblue
 hi PmenuSel ctermbg=darkcyan
 hi PmenuSbar ctermbg=0
-
-"YankRingのShowコマンドの設定
-nnoremap <silent> <F7> :YRShow<CR>
-let g:yankring_max_history = 15
-let g:yankring_window_height = 13
 
 filetype plugin indent on     " required!
 filetype indent on
