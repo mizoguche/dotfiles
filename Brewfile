@@ -53,6 +53,7 @@ cask install skype
 cask install thunderbird
 cask install sourcetree
 cask install appcleaner
+cask install diffmerge
 
 tap homebrew/versions 
 

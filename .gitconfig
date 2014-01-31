@@ -23,4 +23,12 @@
 [github]
 	user = mizoguche
 [merge]
-	tool = opendiff
+	tool = diffmerge
+[mergetool]
+	keepBackup = false
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
