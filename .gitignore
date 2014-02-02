@@ -2,3 +2,6 @@
 */bin/*
 */gen/*
 */RemoteSystemsTempFiles/*
+
+
+Gemfile.lock
