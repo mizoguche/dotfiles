@@ -156,6 +156,12 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'glidenote/memolist.vim' " :MemoNew, :MemoListとかでメモる
 
+" 200msecなんもしなかったり(デフォルト設定)、インサートモードを抜けたりした時に、ファイルが保存される。
+NeoBundle 'vim-scripts/vim-auto-save'
+" デフォルトで有効にする
+let g:auto_save = 1
+set updatetime=1
+
 " yankround
 NeoBundle 'LeafCage/yankround.vim'
 NeoBundle 'kien/ctrlp.vim'
