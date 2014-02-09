@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'pry'
+gem 'pry-doc'
+gem 'pry-rails'
+gem 'pry-byebug'
 gem 'cocoapods'
 gem 'redcarpet'
 gem 'pygments.rb'
