@@ -134,10 +134,17 @@ NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディ�
 NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
 
 " ruby
-NeoBundle 'skwp/vim-rspec'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'janx/vim-rubytest' " \ t でカーソル位置のテストを実行、 \ T でバッファ内のすべてのテストを実行、 \ l で最後に実行したテストを実行
+NeoBundle 'tpope/vim-rake' " :A でRakefile
+
+NeoBundle 'thoughtbot/vim-rspec'
+" RSpec.vim mappings
+map <Leader><C-r> :call RunCurrentSpecFile()<CR>
+map <Leader><C-s> :call RunNearestSpec()<CR>
+map <Leader><C-l> :call RunLastSpec()<CR>
+map <Leader><C-a> :call RunAllSpecs()<CR>
 
 NeoBundle 'taichouchou2/vim-rsense' "Rubyの補完
 if !exists('g:neocomplcache_omni_patterns')
