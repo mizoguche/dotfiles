@@ -27,6 +27,12 @@ install android-sdk
 install vim
 install rsense
 install ag
+install qt4
+install selenium-server-standalone
+install tree
+install maven
+install docker
+install boot2docker
 
 # homebrew-caskのインストール
 tap phinze/homebrew-cask
@@ -54,6 +60,7 @@ cask install thunderbird
 cask install sourcetree
 cask install appcleaner
 cask install diffmerge
+cask install seashore
 
 tap homebrew/versions 
 
