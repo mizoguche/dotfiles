@@ -33,6 +33,7 @@ install tree
 install maven
 install docker
 install boot2docker
+install hub
 
 # homebrew-caskのインストール
 tap phinze/homebrew-cask
