@@ -13,3 +13,6 @@ gem "knife-solo", "~> 0.4.1"
 gem 'berkshelf'
 gem 'capistrano'
 gem 'rspec'
+
+gem 'aws'
+gem 'aws-sdk'
