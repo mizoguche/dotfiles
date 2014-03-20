@@ -10,6 +10,9 @@ export KCODE=u           # KCODEにUTF-8を設定
 export AUTOFEATURE=true  # autotestでfeatureを動かす
 bindkey -v               # vi風バインディング
 
+# Javaのログで日本語が化けないようにする
+export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+
 PROMPT="
 %{${fg[green]}%}[%d]%{${reset_color}%}
 %U%n@%m%#%u "
