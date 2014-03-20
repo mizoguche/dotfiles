@@ -8,7 +8,6 @@ export EDITOR=vim        # エディタをvimに設定
 export LANG=ja_JP.UTF-8  # 文字コードをUTF-8に設定
 export KCODE=u           # KCODEにUTF-8を設定
 export AUTOFEATURE=true  # autotestでfeatureを動かす
-bindkey -v               # vi風バインディング
 
 # Javaのログで日本語が化けないようにする
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
