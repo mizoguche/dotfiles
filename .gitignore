@@ -1,7 +1,2 @@
 .DS_Store
-*/bin/*
-*/gen/*
 */RemoteSystemsTempFiles/*
-
-
-Gemfile.lock
