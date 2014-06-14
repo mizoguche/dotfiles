@@ -271,3 +271,28 @@ nmap <Space>bo :OperaReloadStart<CR>
 nmap <Space>bO :OperaReloadStop<CR>
 nmap <Space>ba :AllBrowserReloadStart<CR>
 nmap <Space>bA :AllBrowserReloadStop<CR>
+
+
+"------------------------------------
+" Unite-rails.vim
+"------------------------------------
+"{{{
+function! UniteRailsSetting()
+  nnoremap <buffer><C-H><C-H><C-H>  :<C-U>Unite rails/view<CR>
+  nnoremap <buffer><C-H><C-H>       :<C-U>Unite rails/model<CR>
+  nnoremap <buffer><C-H>            :<C-U>Unite rails/controller<CR>
+ 
+  nnoremap <buffer><C-H>c           :<C-U>Unite rails/config<CR>
+  nnoremap <buffer><C-H>s           :<C-U>Unite rails/spec<CR>
+  nnoremap <buffer><C-H>m           :<C-U>Unite rails/db -input=migrate<CR>
+  nnoremap <buffer><C-H>l           :<C-U>Unite rails/lib<CR>
+  nnoremap <buffer><expr><C-H>g     ':e '.b:rails_root.'/Gemfile<CR>'
+  nnoremap <buffer><expr><C-H>r     ':e '.b:rails_root.'/config/routes.rb<CR>'
+  nnoremap <buffer><expr><C-H>se    ':e '.b:rails_root.'/db/seeds.rb<CR>'
+  nnoremap <buffer><C-H>ra          :<C-U>Unite rails/rake<CR>
+  nnoremap <buffer><C-H>h           :<C-U>Unite rails/heroku<CR>
+endfunction
+aug MyAutoCmd
+  au User Rails call UniteRailsSetting()
+aug END
+"}}}
