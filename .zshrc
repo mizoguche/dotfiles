@@ -1,6 +1,9 @@
 autoload colors
 colors
 
+bindkey -e
+bindkey "^[[3~" delete-char
+
 alias ls='ls -GF'
 alias gls='gls --color'
 
