@@ -128,6 +128,15 @@ vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
 
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+" 自分用 snippet ファイルの場所
+let s:my_snippet = '~/neosnippet'
+let g:neosnippet#snippets_directory = s:my_snippet
+
+" Plugin key-mappings.
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
 
 NeoBundle 'scrooloose/syntastic' "構文エラーチェック
 NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディング
