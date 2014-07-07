@@ -34,6 +34,10 @@ install maven
 install docker
 install boot2docker
 install hub
+install libxml2
+
+tap peco/peco
+install peco
 
 # homebrew-caskのインストール
 tap phinze/homebrew-cask
@@ -42,7 +46,6 @@ install brew-cask
 # .dmg
 cask install google-chrome
 cask install firefox
-cask install kobito
 cask install virtualbox
 cask install vagrant
 cask install android-studio
