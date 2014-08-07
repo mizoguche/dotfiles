@@ -234,6 +234,11 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'suan/vim-instant-markdown'
 
+" Lightline
+NeoBundle 'itchyny/lightline.vim'
+let g:lightline = {
+      \ 'colorscheme': 'solarized_dark',
+      \ }
 
 filetype plugin on
 " you need this for zsh   
