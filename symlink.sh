@@ -9,8 +9,13 @@ do
 done
 
 # vim backup directory
-mkdir ~/vimbackup
+mkdir -p ~/vimbackup
 
 # install NeoBundle
 mkdir -p ~/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
+# install colorschema
+ln -Fis $PWD/colors ~/.vim
+
+ln -Fis ~/Dropbox/neosnippet/ ~/neosnippet

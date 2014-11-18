@@ -79,6 +79,11 @@ set hlsearch
 "wildmenu
 set wildmenu
 
+"colorscheme
+syntax enable
+set background=dark
+colorscheme solarized
+
 "ESC２回押しで検索ハイライトを消去
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
