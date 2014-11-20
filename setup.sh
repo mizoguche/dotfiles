@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo 'create symbolic link of dotfiles'
+
 cd $(dirname $0)
 for dotfile in .?*
 do
@@ -8,14 +11,22 @@ do
     fi
 done
 
-# vim backup directory
+
+echo 'vim setup'
+
+echo 'vim backup directory'
 mkdir -p ~/vimbackup
 
-# install NeoBundle
+echo 'install NeoBundle'
 mkdir -p ~/.vim/bundle
 git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
-# install colorschema
+echo 'install colorschema'
 ln -Fis $PWD/colors ~/.vim
+
+echo 'install libraries for markdown html preview'
+brew install nodejs
+sudo gem install redcarpet pygments.rb
+npm -g install instant-markdown-d
 
 ln -Fis ~/Dropbox/neosnippet/ ~/neosnippet
