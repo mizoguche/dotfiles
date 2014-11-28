@@ -95,25 +95,30 @@ nnoremap <Up>   gk
 " プラグイン
 "----------------------------------------------------------
 "unite.vim
-set nocompatible              " be iMproved
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" originalrepos on github
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'windows' : 'make -f make_mingw32.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-  \ }
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/vimfiler'
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+NeoBundle 'Shougo/vimproc.vim'
+NeoBundle 'Shougo/vimshell.vim'
+
 
 NeoBundle 'Shougo/unite.vim'
 
@@ -332,3 +337,18 @@ aug MyAutoCmd
   au User Rails call UniteRailsSetting()
 aug END
 "}}}
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+NeoBundle 'yaymukund/vim-rabl'
+
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"----------------------------------------------------------
+" プラグインおわり
+"----------------------------------------------------------
