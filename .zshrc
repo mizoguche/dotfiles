@@ -17,9 +17,7 @@ export AUTOFEATURE=true  # autotestでfeatureを動かす
 # Javaのログで日本語が化けないようにする
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
-PROMPT="
-%{${fg[green]}%}[%d]%{${reset_color}%}
-%U%n@%m%#%u "
+PROMPT="%{${fg[green]}%}%d%{${reset_color}%} %{${fg[blue]}%}%U%n%#%u%{${reset_color}%} "
 PROMPT2="> "
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && PROMPT="%{${fg[red]}%}${PROMPT}%{${reset_color}%}"
 SPROMPT="%B%r is correct? [Yes, No, About, Edit]:%b "
