@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 "----------------------------------------------------------
 " 文字コードの指定
 "----------------------------------------------------------
@@ -20,9 +22,6 @@ set browsedir=buffer
 
 "クリップボードをWindowsと連携
 set clipboard=unnamed,autoselect
-
-"Vi互換をオフ
-set nocompatible
 
 "スワップファイル用のディレクトリ
 set directory=$HOME/vimbackup
@@ -80,7 +79,6 @@ set hlsearch
 set wildmenu
 
 "colorscheme
-syntax enable
 set background=dark
 colorscheme solarized
 
@@ -175,13 +173,6 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'janx/vim-rubytest' " \ t でカーソル位置のテストを実行、 \ T でバッファ内のすべてのテストを実行、 \ l で最後に実行したテストを実行
 NeoBundle 'tpope/vim-rake' " :A でRakefile
-
-NeoBundle 'thoughtbot/vim-rspec'
-" RSpec.vim mappings
-map <Leader><C-r> :call RunCurrentSpecFile()<CR>
-map <Leader><C-s> :call RunNearestSpec()<CR>
-map <Leader><C-l> :call RunLastSpec()<CR>
-map <Leader><C-a> :call RunAllSpecs()<CR>
 
 NeoBundle 'taichouchou2/vim-rsense' "Rubyの補完
 if !exists('g:neocomplcache_omni_patterns')
@@ -278,7 +269,6 @@ hi PmenuSbar ctermbg=0
 
 filetype plugin indent on     " required!
 filetype indent on
-syntax on
 
 " ステータスラインに現在のブランチを表示
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
@@ -349,6 +339,7 @@ NeoBundle 'yaymukund/vim-rabl'
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+syntax on
 "----------------------------------------------------------
 " プラグインおわり
 "----------------------------------------------------------
