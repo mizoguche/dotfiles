@@ -89,6 +89,13 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <Down> gj
 nnoremap <Up>   gk
 
+" http://itchyny.hatenablog.com/entry/2014/12/25/090000
+nnoremap Y y$
+set display=lastline
+set matchtime=1
+nnoremap + <C-a>
+nnoremap - <C-x>
+
 "----------------------------------------------------------
 " プラグイン
 "----------------------------------------------------------
