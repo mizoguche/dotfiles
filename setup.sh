@@ -11,6 +11,9 @@ do
     fi
 done
 
+echo 'install antigen'
+mkdir -p ~/.zsh
+git clone https://github.com/zsh-users/antigen ~/.zsh/antigen
 
 echo 'vim setup'
 
