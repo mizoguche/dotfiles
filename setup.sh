@@ -27,9 +27,4 @@ git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 echo 'install colorschema'
 ln -Fis $PWD/colors ~/.vim
 
-echo 'install libraries for markdown html preview'
-brew install nodejs
-sudo gem install redcarpet pygments.rb
-npm -g install instant-markdown-d
-
 ln -Fis ~/Dropbox/neosnippet/ ~/neosnippet
