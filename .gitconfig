@@ -16,6 +16,7 @@
     quotepath = false
     precomposeunicode = true
     excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
 [http]
     sslVerify = false
 [push]
