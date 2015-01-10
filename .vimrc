@@ -172,6 +172,8 @@ if has('conceal')
 endif
 
 NeoBundle 'scrooloose/syntastic' "構文エラーチェック
+let g:syntastic_ruby_checkers = ['rubocop']
+
 NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディング
 NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
 
