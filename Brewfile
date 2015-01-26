@@ -35,6 +35,8 @@ brew install docker
 brew install boot2docker
 brew install hub
 brew install libxml2
+brew install graphviz
+brew install terminal-notifier
 
 brew tap peco/peco
 brew install peco
