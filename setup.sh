@@ -30,3 +30,7 @@ echo 'install colorschema'
 ln -Fis $PWD/colors ~/.vim
 
 ln -Fis ~/Dropbox/neosnippet/ ~/neosnippet
+
+# show hidden files in Finder
+defaults write com.apple.finder AppleShowAllFiles -bool YES
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true

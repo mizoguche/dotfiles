@@ -35,6 +35,8 @@ brew install docker
 brew install boot2docker
 brew install hub
 brew install libxml2
+brew install graphviz
+brew install terminal-notifier
 
 brew tap peco/peco
 brew install peco
@@ -65,6 +67,8 @@ brew cask install sourcetree
 brew cask install appcleaner
 brew cask install diffmerge
 brew cask install seashore
+brew cask install google-japanese-ime
+brew cask install atom
 
 brew tap homebrew/versions
 
