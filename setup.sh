@@ -11,6 +11,8 @@ do
     fi
 done
 
+source ~/.zshrc
+
 echo 'install antigen'
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/antigen ~/.zsh/antigen
