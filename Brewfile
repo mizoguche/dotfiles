@@ -39,6 +39,7 @@ brew install hub
 brew install libxml2
 brew install graphviz
 brew install terminal-notifier
+brew install go
 
 brew tap peco/peco
 brew install peco
