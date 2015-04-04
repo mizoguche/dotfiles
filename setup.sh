@@ -11,8 +11,6 @@ do
     fi
 done
 
-source ~/.zshrc
-
 echo 'install antigen'
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/antigen ~/.zsh/antigen
@@ -34,3 +32,5 @@ ln -Fis ~/Dropbox/neosnippet/ ~/neosnippet
 # show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool YES
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+source ~/.zshrc

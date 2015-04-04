@@ -1,6 +1,3 @@
-autoload colors
-colors
-
 bindkey -e
 bindkey "^[[3~" delete-char
 
@@ -18,12 +15,12 @@ export AUTOFEATURE=true  # autotestでfeatureを動かす
 # Javaのログで日本語が化けないようにする
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
-# Homebrew Caskのインストール先
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 SPROMPT="%B%r is correct? [Yes, No, About, Edit]:%b "
 
 source ~/.zshrc.antigen
+
+autoload colors
+colors
 
 # cd って打たなくてもディレクトリ名入れるだけでcdする
 setopt auto_cd

@@ -183,15 +183,15 @@ NeoBundle 'basyura/unite-rails'
 NeoBundle 'janx/vim-rubytest' " \ t でカーソル位置のテストを実行、 \ T でバッファ内のすべてのテストを実行、 \ l で最後に実行したテストを実行
 NeoBundle 'tpope/vim-rake' " :A でRakefile
 
-NeoBundle 'taichouchou2/vim-rsense' "Rubyの補完
-if !exists('g:neocomplcache_omni_patterns')
-  let g:neocomplcache_omni_patterns = {}
-endif
-let g:rsenseUseOmniFunc = 1
-if filereadable( expand('~/.vim/opt/rsense-0.3/bin/rsense') )
-  let g:rsenseHome = expand('~/.vim/opt/rsense-0.3')
-  let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-endif
+" NeoBundle 'taichouchou2/vim-rsense' "Rubyの補完
+" if !exists('g:neocomplcache_omni_patterns')
+"   let g:neocomplcache_omni_patterns = {}
+" endif
+" let g:rsenseUseOmniFunc = 1
+" if filereadable( expand('~/.vim/opt/rsense-0.3/bin/rsense') )
+"   let g:rsenseHome = expand('~/.vim/opt/rsense-0.3')
+"   let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+" endif
 
 NeoBundle 'taichouchou2/vim-endwise' " rubyとかで自動的にendを入れてくれる
 NeoBundle 'tomtom/tcomment_vim' " <c-_><c-_> でコメントアウトのトグル
