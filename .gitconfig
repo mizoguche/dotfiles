@@ -27,3 +27,5 @@
 	tool = opendiff
 [mergetool]
 	keepBackup = false
+[ghq]
+	root = ~/workspace

@@ -44,6 +44,9 @@ brew install go
 brew tap peco/peco
 brew install peco
 
+brew tap motemen/ghq
+brew install ghq
+
 # homebrew-caskのインストール
 brew tap caskroom/homebrew-cask
 brew install brew-cask
