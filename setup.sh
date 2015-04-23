@@ -32,5 +32,6 @@ ln -Fis ~/Dropbox/neosnippet/ ~/neosnippet
 # show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool YES
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+defaults write com.apple.finder QLEnableTextSelection -bool true 
 
 source ~/.zshrc
