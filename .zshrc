@@ -4,7 +4,7 @@ bindkey "^[[3~" delete-char
 alias ls='ls -GF'
 alias gls='gls --color'
 
-alias bi='bundle install'
+alias bi='bundle install --path=vendor/bundle -j8'
 alias be='bundle exec'
 
 export EDITOR=vim        # エディタをvimに設定
