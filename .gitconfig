@@ -28,4 +28,4 @@
 [mergetool]
 	keepBackup = false
 [ghq]
-	root = ~/workspace
+	root = ~/workspace/src
