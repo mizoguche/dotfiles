@@ -15,6 +15,8 @@ export AUTOFEATURE=true  # autotestでfeatureを動かす
 # Javaのログで日本語が化けないようにする
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
+export ENHANCD_FILTER=peco
+
 SPROMPT="%B%r is correct? [Yes, No, About, Edit]:%b "
 
 source ~/.zshrc.antigen

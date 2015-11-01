@@ -20,5 +20,8 @@ antigen bundle knu/z
 # cd parent directory directly
 antigen-bundle Tarrasch/zsh-bd
 
+# cd interective filter
+antigen-bundle b4b4r07/enhancd
+
 # Tell antigen that you're done.
 antigen apply
