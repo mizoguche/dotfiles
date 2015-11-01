@@ -75,6 +75,7 @@ brew cask install diffmerge
 brew cask install seashore
 brew cask install google-japanese-ime
 brew cask install atom
+brew cask install qlmarkdown
 
 brew tap homebrew/versions
 
