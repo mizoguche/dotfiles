@@ -11,6 +11,7 @@
     br = branch
     st = status -sb
     gr = log --branches --graph  --tags --remotes --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+    pushf = push --force-with-lease
 [core]
     editor = vim -c \"set fenc=utf-8\"
     quotepath = false
