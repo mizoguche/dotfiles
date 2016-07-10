@@ -1,3 +1,6 @@
+### direnv
+.envrc
+
 ### Visual Studio Code for Unity
 **/.vscode/
 **/Editor/VSCode.cs*

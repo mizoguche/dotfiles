@@ -1,3 +1,5 @@
+eval "$(direnv hook zsh)"
+
 bindkey -e
 bindkey "^[[3~" delete-char
 

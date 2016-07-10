@@ -40,6 +40,7 @@ brew install libxml2
 brew install graphviz
 brew install terminal-notifier
 brew install go
+brew install direnv
 
 brew tap peco/peco
 brew install peco
