@@ -20,10 +20,6 @@ echo 'vim setup'
 echo 'vim backup directory'
 mkdir -p ~/vimbackup
 
-echo 'install NeoBundle'
-mkdir -p ~/.vim/bundle
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-
 echo 'install colorschema'
 ln -Fis $PWD/colors ~/.vim
 

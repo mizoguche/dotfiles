@@ -81,6 +81,7 @@ set wildmenu
 "colorscheme
 set background=dark
 colorscheme solarized
+syntax on
 
 "ESC２回押しで検索ハイライトを消去
 nnoremap <ESC><ESC> :nohlsearch<CR>
@@ -96,235 +97,42 @@ set matchtime=1
 nnoremap + <C-a>
 nnoremap - <C-x>
 
-"----------------------------------------------------------
-" プラグイン
-"----------------------------------------------------------
-"unite.vim
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
+" Vimgrep後にquickfix-windowを開く
+autocmd QuickFixCmdPost *grep* cwindow
 
-if has('vim_starting')
-  set nocompatible               " Be iMproved
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+" ================================
+" dein.vim
+" ================================
+
+if !&compatible
+  set nocompatible
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+" reset augroup
+augroup MyAutoCmd
+  autocmd!
+augroup END
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'Shougo/vimshell.vim'
-
-
-NeoBundle 'Shougo/unite.vim'
-
-"Ctrl+lでUnite file
-map <C-l> :Unite file<CR>
-
-"" unite-grep {{{
-" unite-grepのバックエンドをagに切り替える
-" http://qiita.com/items/c8962f9325a5433dc50d
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts = '--nocolor --nogroup'
-let g:unite_source_grep_recursive_opt = ''
-let g:unite_source_grep_max_candidates = 200
- 
-" unite-grepのキーマップ
-" 選択した文字列をunite-grep
-" https://github.com/shingokatsushima/dotfiles/blob/master/.vimrc
-vnoremap /g y:Unite grep::-iHRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
+" dein settings {{{
+" dein自体の自動インストール
+let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.vim') : $XDG_CACHE_HOME
+let s:dein_dir = s:cache_home . '/dein'
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+if !isdirectory(s:dein_repo_dir)
+  call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
+endif
+let &runtimepath = s:dein_repo_dir .",". &runtimepath
+" プラグイン読み込み＆キャッシュ作成
+let s:toml_file = fnamemodify(expand('<sfile>'), ':h').'/.dein.toml'
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir, [$MYVIMRC, s:toml_file])
+  call dein#load_toml(s:toml_file)
+  call dein#end()
+  call dein#save_state()
+endif
+" 不足プラグインの自動インストール
+if has('vim_starting') && dein#check_install()
+  call dein#install()
+endif
 " }}}
-
-
-NeoBundle 'Shougo/neocomplcache'
-
-NeoBundle 'scrooloose/syntastic' "構文エラーチェック
-let g:syntastic_ruby_checkers = ['rubocop']
-
-NeoBundle 'thinca/vim-quickrun' "実行結果を確認しながらコーディング
-NeoBundle 'othree/eregex.vim.git' " rubyっぽい正規表現
-
-" ruby
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'basyura/unite-rails'
-NeoBundle 'janx/vim-rubytest' " \ t でカーソル位置のテストを実行、 \ T でバッファ内のすべてのテストを実行、 \ l で最後に実行したテストを実行
-NeoBundle 'tpope/vim-rake' " :A でRakefile
-
-" NeoBundle 'taichouchou2/vim-rsense' "Rubyの補完
-" if !exists('g:neocomplcache_omni_patterns')
-"   let g:neocomplcache_omni_patterns = {}
-" endif
-" let g:rsenseUseOmniFunc = 1
-" if filereadable( expand('~/.vim/opt/rsense-0.3/bin/rsense') )
-"   let g:rsenseHome = expand('~/.vim/opt/rsense-0.3')
-"   let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-" endif
-
-NeoBundle 'taichouchou2/vim-endwise' " rubyとかで自動的にendを入れてくれる
-NeoBundle 'tomtom/tcomment_vim' " <c-_><c-_> でコメントアウトのトグル
-NeoBundle 'tpope/vim-fugitive' " 
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'glidenote/memolist.vim' " :MemoNew, :MemoListとかでメモる
-
-" 200msecなんもしなかったり(デフォルト設定)、インサートモードを抜けたりした時に、ファイルが保存される。
-NeoBundle 'vim-scripts/vim-auto-save'
-" デフォルトで有効にする
-let g:auto_save = 1
-set updatetime=1
-
-" yankround
-NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'kien/ctrlp.vim'
-"" キーマップ
-nmap p <Plug>(yankround-p)
-nmap P <Plug>(yankround-P)
-nmap <C-p> <Plug>(yankround-prev)
-nmap <C-n> <Plug>(yankround-next)
-"" 履歴取得数
-let g:yankround_max_history = 1000
-""履歴一覧(kien/ctrlp.vim)
-nnoremap <C-p> :Unite yankround<CR>
-nnoremap gg gg "" ggで先頭行に戻りたいけどyankroundが邪魔をしている
-
-NeoBundle 'editorconfig/editorconfig-vim'
-
-" HTML5
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'open-browser.vim'
-NeoBundle 'tell-k/vim-browsereload-mac'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'groenewege/vim-less' " 
-"NeoBundle 'taichouchou2/vim-javascript' " jQuery syntax追加
-NeoBundle 'kchmck/vim-coffee-script'
-
-"NeoBundle 'plasticboy/vim-markdown' 
-" markdownで項目をfoldしない
-"let g:vim_markdown_folding_disabled=1
-" markdown viewer
-" 事前に下記を実行しとく
-"
-" $ brew install nodejs
-" $ gem install redcarpet pygments.rb
-" $ npm -g install instant-markdown-d
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'suan/vim-instant-markdown'
-
-" Lightline
-NeoBundle 'itchyny/lightline.vim'
-let g:lightline = {
-      \ 'colorscheme': 'solarized_dark',
-      \ }
-
-filetype plugin on
-" you need this for zsh   
-set shell=bash\ -i
-
-let g:user_emmet_settings = {
-  \  'lang' : 'ja',
-  \  'indentation' : '  ',
-  \  'perl' : {
-  \    'aliases' : {
-  \      'req' : 'require '
-  \    },
-  \    'snippets' : {
-  \      'use' : "use strict\nuse warnings\n\n",
-  \      'warn' : "warn \"|\";",
-  \    }
-  \  }
-  \}
-
-"gist.vim
-let g:gist_show_privates = 1
-let g:gist_post_private = 1
-
-" 補完のポップアップの色
-hi Pmenu ctermbg=darkblue
-hi PmenuSel ctermbg=darkcyan
-hi PmenuSbar ctermbg=0
-
-filetype plugin indent on     " required!
-filetype indent on
-
-" ステータスラインに現在のブランチを表示
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set laststatus=2
-au InsertEnter * hi StatusLine guifg=white guibg=darkblue gui=none ctermfg=white ctermbg=darkblue cterm=none
-au InsertLeave * hi StatusLine guifg=white guibg=darkgray gui=none ctermfg=white ctermbg=darkgray cterm=none
-
- 
-"----------------------------------------
-" open-browsere
-"----------------------------------------
-" カーソル下のURLをブラウザで開く
-nmap <Leader>o <Plug>(openbrowser-open)
-vmap <Leader>o <Plug>(openbrowser-open)
-" ググる
-nnoremap <Leader>g :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>
- 
- 
-"----------------------------------------
-" vim-browsereload-mac
-"----------------------------------------
-" リロード後に戻ってくるアプリ 変更してください
-let g:returnApp = "iTerm"
-nmap <Space>bc :ChromeReloadStart<CR>
-nmap <Space>bC :ChromeReloadStop<CR>
-nmap <Space>bf :FirefoxReloadStart<CR>
-nmap <Space>bF :FirefoxReloadStop<CR>
-nmap <Space>bs :SafariReloadStart<CR>
-nmap <Space>bS :SafariReloadStop<CR>
-nmap <Space>bo :OperaReloadStart<CR>
-nmap <Space>bO :OperaReloadStop<CR>
-nmap <Space>ba :AllBrowserReloadStart<CR>
-nmap <Space>bA :AllBrowserReloadStop<CR>
-
-
-"------------------------------------
-" Unite-rails.vim
-"------------------------------------
-"{{{
-function! UniteRailsSetting()
-  nnoremap <buffer><C-H><C-H><C-H>  :<C-U>Unite rails/view<CR>
-  nnoremap <buffer><C-H><C-H>       :<C-U>Unite rails/model<CR>
-  nnoremap <buffer><C-H>            :<C-U>Unite rails/controller<CR>
- 
-  nnoremap <buffer><C-H>c           :<C-U>Unite rails/config<CR>
-  nnoremap <buffer><C-H>s           :<C-U>Unite rails/spec<CR>
-  nnoremap <buffer><C-H>m           :<C-U>Unite rails/db -input=migrate<CR>
-  nnoremap <buffer><C-H>l           :<C-U>Unite rails/lib<CR>
-  nnoremap <buffer><expr><C-H>g     ':e '.b:rails_root.'/Gemfile<CR>'
-  nnoremap <buffer><expr><C-H>r     ':e '.b:rails_root.'/config/routes.rb<CR>'
-  nnoremap <buffer><expr><C-H>se    ':e '.b:rails_root.'/db/seeds.rb<CR>'
-  nnoremap <buffer><C-H>ra          :<C-U>Unite rails/rake<CR>
-  nnoremap <buffer><C-H>h           :<C-U>Unite rails/heroku<CR>
-endfunction
-aug MyAutoCmd
-  au User Rails call UniteRailsSetting()
-aug END
-"}}}
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-NeoBundle 'yaymukund/vim-rabl'
-
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-syntax on
-"----------------------------------------------------------
-" プラグインおわり
-"----------------------------------------------------------
