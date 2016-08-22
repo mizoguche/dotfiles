@@ -79,8 +79,6 @@ set hlsearch
 set wildmenu
 
 "colorscheme
-set background=dark
-colorscheme solarized
 syntax on
 
 "ESC２回押しで検索ハイライトを消去

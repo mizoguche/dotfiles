@@ -78,3 +78,11 @@ nnoremap <silent> ,mn :<C-u>MemoNew <CR>
 nnoremap <silent> ,ml :<C-u>MemoList <CR>
 nnoremap <silent> ,mg :<C-u>MemoGrep <CR>
 '''
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized.git'
+hook_add = '''
+set background=dark
+colorscheme solarized
+syntax on
+'''

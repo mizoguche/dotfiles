@@ -1,5 +1,7 @@
 #!/bin/sh
 
+./Brewfile
+
 echo 'create symbolic link of dotfiles'
 
 cd $(dirname $0)
@@ -22,8 +24,6 @@ mkdir -p ~/vimbackup
 
 echo 'install colorschema'
 ln -Fis $PWD/colors ~/.vim
-
-ln -Fis ~/Dropbox/neosnippet/ ~/neosnippet
 
 # show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool YES
