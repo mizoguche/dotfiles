@@ -29,6 +29,7 @@ brew install libxml2
 brew install graphviz
 brew install go
 brew install direnv
+brew install glide
 
 brew tap peco/peco
 brew install peco
