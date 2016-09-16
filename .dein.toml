@@ -91,9 +91,9 @@ let g:memolist_path = "$HOME/Dropbox/memo"
 let g:memolist_unite = 1
 let g:memolist_memo_suffix = "md"
 let g:memolist_unite_option = "-auto-preview -start-insert"
-nnoremap <silent> ,mn :<C-u>MemoNew <CR>
-nnoremap <silent> ,ml :<C-u>Unite -auto-preview memolist<CR>
-nnoremap <silent> ,mg :<C-u>Unite -auto-preview memogrep<CR>
+nnoremap <silent> <Leader>mn :<C-u>MemoNew <CR>
+nnoremap <silent> <Leader>ml :<C-u>Unite -auto-preview memolist<CR>
+nnoremap <silent> <Leader>mg :<C-u>Unite -auto-preview memogrep<CR>
 
 let g:unite_source_alias_aliases = {
 \   "memogrep" : {
