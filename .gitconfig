@@ -22,7 +22,7 @@
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
 [http]
-    sslVerify = false
+	sslVerify = true
 [push]
     default = simple
 [github]
