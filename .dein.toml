@@ -116,3 +116,11 @@ set background=dark
 colorscheme solarized
 syntax on
 '''
+
+[[plugins]]
+repo = 'mileszs/ack.vim'
+hook_add = '''
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+'''
