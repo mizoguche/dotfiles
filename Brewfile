@@ -37,6 +37,7 @@ brew install peco
 
 brew tap motemen/ghq
 brew install ghq
+brew install zplug
 
 # homebrew-caskのインストール
 brew tap caskroom/cask

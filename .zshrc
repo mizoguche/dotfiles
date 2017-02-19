@@ -21,7 +21,7 @@ export ENHANCD_FILTER=peco
 
 SPROMPT="%B%r is correct? [Yes, No, About, Edit]:%b "
 
-source ~/.zshrc.antigen
+source ~/.zshrc.zplug
 
 autoload colors
 colors
