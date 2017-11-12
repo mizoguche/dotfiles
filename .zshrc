@@ -19,8 +19,6 @@ export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
 export ENHANCD_FILTER=peco
 
-SPROMPT="%B%r is correct? [Yes, No, About, Edit]:%b "
-
 source ~/.zshrc.zplug
 
 autoload colors
@@ -36,8 +34,6 @@ setopt pushd_ignore_dups  # 重複を無視する
 # rm * を実行時に確認
 setopt rmstar_wait
 
-# command correct edition before each completion attempt
-setopt correct
 # no remove postfix slash of command line
 setopt noautoremoveslash
 
