@@ -8,6 +8,7 @@ brew upgrade
 
 # Packages
 brew install git
+brew install git-lfs
 brew install gibo
 brew install imagemagick
 brew install node
