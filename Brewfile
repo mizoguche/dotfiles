@@ -1,68 +1,70 @@
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Make sure using latest Homebrew
-brew update
-
-# Update already-installed formula (takes too much time, I will do it manually later)
-brew upgrade
+tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/core"
 
 # Packages
-brew install git
-brew install git-lfs
-brew install gibo
-brew install imagemagick
-brew install node
-brew install openssl
-brew install rbenv
-brew install ruby-build
-brew install readline
-brew install autoconf
-brew install sqlite
-brew install wget
-brew install zsh
-brew install zsh-completions
-brew install android-sdk
-brew install vim
-brew install ag
-brew install qt4
-brew install hub
-brew install libxml2
-brew install graphviz
-brew install go
-brew install direnv
-brew install glide
-brew install tree
+brew "git"
+brew "git-lfs"
+brew "gibo"
+brew "imagemagick"
+brew "node"
+brew "openssl"
+brew "rbenv"
+brew "ruby-build"
+brew "readline"
+brew "autoconf"
+brew "sqlite"
+brew "wget"
+brew "zsh"
+brew "zsh-completions"
+brew "vim"
+brew "ag"
+brew "hub"
+brew "libxml2"
+brew "graphviz"
+brew "go"
+brew "direnv"
+brew "glide"
+brew "tree"
+brew "yarn"
+brew "peco"
+brew "ghq"
+brew "zplug"
+brew "mas"
+brew "ffmpeg"
 
-brew tap peco/peco
-brew install peco
+cask "google-chrome"
+cask "firefox"
+cask "virtualbox"
+cask "iterm2"
+cask "alfred"
+cask "bettertouchtool"
+cask "karabiner"
+cask "rescuetime"
+cask "dropbox"
+cask "skype"
+cask "appcleaner"
+cask "google-japanese-ime"
+cask "qlmarkdown"
+cask "docker"
+cask "jetbrains-toolbox"
+cask "rescuetime"
+cask "flux"
+cask "slack"
+cask "karabiner"
+cask "docker"
+cask "1password"
+cask "kindle"
+cask "send-to-kindle"
+cask "java"
+cask "java8"
 
-brew tap motemen/ghq
-brew install ghq
-brew install zplug
 
-# homebrew-caskのインストール
-brew tap caskroom/cask
-
-# .dmg
-brew cask install google-chrome
-brew cask install firefox
-brew cask install virtualbox
-brew cask install android-studio
-brew cask install iterm2
-brew cask install alfred
-brew cask install bettertouchtool
-brew cask install karabiner
-brew cask install rescuetime
-brew cask install google-drive
-brew cask install sophos-antivirus
-brew cask install dropbox
-brew cask install skype
-brew cask install sourcetree
-brew cask install appcleaner
-brew cask install google-japanese-ime
-brew cask install qlmarkdown
-
-brew tap homebrew/versions
-
-# Remove outdated versions
-brew cleanup
+mas "LINE", id: 539883307
+mas "WinArchiver Lite", id: 414855915
+mas "Xcode", id: 497799835
+mas "Todoist", id: 585829637
+mas "Desktop Calendar Plus", id: 524688159
+mas "Noizio", id: 928871589
+mas "Microsoft Remote Desktop", id: 715768417
+mas "Giphy Capture", id: 668208984
