@@ -57,7 +57,7 @@ cask "1password"
 cask "kindle"
 cask "send-to-kindle"
 cask "java"
-cask "java8"
+cask "typora"
 
 
 mas "LINE", id: 539883307
