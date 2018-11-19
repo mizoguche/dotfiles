@@ -32,6 +32,7 @@ brew "ghq"
 brew "zplug"
 brew "mas"
 brew "ffmpeg"
+brew "gradle"
 
 cask "google-chrome"
 cask "firefox"
