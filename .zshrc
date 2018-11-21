@@ -1,3 +1,8 @@
+if [ -f ~/.zshenv ]
+then
+  source ~/.zshenv
+fi
+
 eval "$(direnv hook zsh)"
 
 bindkey -e
