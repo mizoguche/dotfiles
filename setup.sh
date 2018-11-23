@@ -1,27 +1,8 @@
 #!/bin/sh
 
-# Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# Make sure using latest Homebrew
-brew update
-# Update already-installed formula (takes too much time, I will do it manually later)
-brew upgrade
-brew bundle
-
-./setup.copy.sh
-
-echo 'vim setup'
-
-# Install dein.vim
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-# For example, we just use `~/.cache/dein` as installation directory
-sh ./installer.sh ~/.cache/dein
-
-echo 'vim backup directory'
-mkdir -p ~/vimbackup
-
-echo 'install colorschema'
-ln -Fis $PWD/colors ~/.vim
+./01_setup_homebrew.sh
+./02_setup_vim.sh
+./03_setup_copy_dotfiles.sh
 
 # show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool YES
