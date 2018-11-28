@@ -57,6 +57,9 @@ cask "send-to-kindle"
 cask "java"
 cask "typora"
 cask "karabiner-elements"
+cask "sketch"
+cask "rocket"
+cask "trailer"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
