@@ -59,6 +59,7 @@ cask "karabiner-elements"
 cask "sketch"
 cask "trailer"
 cask "pushbullet"
+cask "vivaldi"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
