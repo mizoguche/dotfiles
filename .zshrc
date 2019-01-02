@@ -4,6 +4,8 @@ then
 fi
 
 eval "$(direnv hook zsh)"
+eval "$(nodenv init -)"
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 bindkey -e
 bindkey "^[[3~" delete-char
