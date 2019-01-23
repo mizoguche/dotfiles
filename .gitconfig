@@ -21,6 +21,7 @@
     precomposeunicode = true
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
+	autocrlf = input
 [http]
 	sslVerify = true
 [push]
