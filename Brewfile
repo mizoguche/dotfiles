@@ -1,6 +1,7 @@
 tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/core"
+tap "heroku/brew"
 
 # Packages
 brew "git"
@@ -33,6 +34,7 @@ brew "zplug"
 brew "mas"
 brew "ffmpeg"
 brew "gradle"
+brew "heroku"
 
 cask "google-chrome"
 cask "firefox"
