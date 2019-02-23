@@ -3,9 +3,23 @@ then
   source ~/.zshenv
 fi
 
-eval "$(direnv hook zsh)"
-eval "$(nodenv init -)"
+# ruby
+export PATH=~/.rbenv/shims:$PATH
 export PATH="$HOME/.rbenv/shims:$PATH"
+eval "$(rbenv init -)"
+
+# node
+export PATH=~/.nodenv/shims:$PATH
+eval "$(nodenv init -)"
+
+# python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# direnv
+eval "$(direnv hook zsh)"
+
 
 bindkey -e
 bindkey "^[[3~" delete-char
