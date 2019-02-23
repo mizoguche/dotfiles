@@ -1,7 +1,12 @@
 #!/bin/sh
 
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if ! type brew; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "Homebrew is alredy installed.\n"
+fi
+
 # Make sure using latest Homebrew
 brew update
 # Update already-installed formula (takes too much time, I will do it manually later)
