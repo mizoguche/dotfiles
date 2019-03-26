@@ -73,3 +73,4 @@ mas "Desktop Calendar Plus", id: 524688159
 mas "Noizio", id: 928871589
 mas "Microsoft Remote Desktop", id: 715768417
 mas "Giphy Capture", id: 668208984
+mas "Affinity Designer", id: 824171161
