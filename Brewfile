@@ -76,3 +76,4 @@ mas "Microsoft Remote Desktop", id: 715768417
 mas "Giphy Capture", id: 668208984
 mas "Affinity Designer", id: 824171161
 mas "Skitch", id: 425955336
+mas "Amphetamine", id: 937984704
