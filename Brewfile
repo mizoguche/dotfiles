@@ -51,6 +51,7 @@ cask "dropbox"
 cask "skype"
 cask "appcleaner"
 cask "google-japanese-ime"
+cask "google-backup-and-sync"
 cask "qlmarkdown"
 cask "jetbrains-toolbox"
 cask "rescuetime"
@@ -74,3 +75,4 @@ mas "Noizio", id: 928871589
 mas "Microsoft Remote Desktop", id: 715768417
 mas "Giphy Capture", id: 668208984
 mas "Affinity Designer", id: 824171161
+mas "Skitch", id: 425955336
