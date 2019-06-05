@@ -67,6 +67,7 @@ cask "karabiner-elements"
 cask "sketch"
 cask "trailer"
 cask "vivaldi"
+cask "unity-hub"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
