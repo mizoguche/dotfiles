@@ -39,10 +39,10 @@ brew "kotlin"
 brew "gts"
 brew "jasper"
 brew "netpbm"
-
-cask "adoptopenjdk8"
+brew "mysql"
 brew "gradle"
 
+cask "adoptopenjdk8"
 cask "google-chrome"
 cask "firefox"
 cask "iterm2"
