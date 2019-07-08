@@ -20,6 +20,9 @@ eval "$(pyenv init -)"
 # direnv
 eval "$(direnv hook zsh)"
 
+# Go
+export GOPATH=~/workspace
+export GO111MODULE=on
 
 bindkey -e
 bindkey "^[[3~" delete-char
