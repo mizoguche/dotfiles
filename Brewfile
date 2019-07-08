@@ -41,6 +41,7 @@ brew "jasper"
 brew "netpbm"
 brew "mysql"
 brew "gradle"
+brew "haskell-stack"
 
 cask "adoptopenjdk8"
 cask "google-chrome"
