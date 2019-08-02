@@ -65,6 +65,7 @@ cask "karabiner-elements"
 cask "sketch"
 cask "trailer"
 cask "vivaldi"
+cask "mysqlworkbench"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
