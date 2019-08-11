@@ -71,6 +71,8 @@ cask "vivaldi"
 cask "mysqlworkbench"
 cask "blender"
 cask "unity-hub"
+cask "android-sdk"
+cask "android-platform-tools"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
