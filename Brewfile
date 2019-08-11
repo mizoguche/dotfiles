@@ -44,6 +44,7 @@ brew "gradle"
 brew "haskell-stack"
 
 cask "adoptopenjdk8"
+cask "adoptopenjdk12"
 cask "google-chrome"
 cask "firefox"
 cask "iterm2"
