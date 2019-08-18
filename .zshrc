@@ -28,6 +28,9 @@ export GO111MODULE=on
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 export PATH="$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
+# Homebrew
+export PATH="/usr/local/sbin:$PATH"
+
 bindkey -e
 bindkey "^[[3~" delete-char
 
