@@ -25,8 +25,8 @@ export GOPATH=~/workspace
 export GO111MODULE=on
 
 # Android
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export PATH=/usr/local/opt/android-sdk/tools:/usr/local/opt/android-sdk/platform-tools:$PATH
+export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+export PATH="$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
 bindkey -e
 bindkey "^[[3~" delete-char
