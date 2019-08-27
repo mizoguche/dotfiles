@@ -1,3 +1,6 @@
+[user]
+    name = Michiaki Mizoguchi
+    email = michiaki.mizoguchi@gmail.com
 [include]
     path = ~/.gitconfig.local
 [color]
@@ -11,7 +14,7 @@
     br = branch
     st = status -sb
     sw = switch
-    gr = log --branches --graph  --tags --remotes --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+    gr = log --branches --graph --tags --remotes --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
     pushf = push --force-with-lease
     pullp = pull -p
     fetchp = fetch -p
@@ -22,25 +25,27 @@
     precomposeunicode = true
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
-	autocrlf = input
+    ignorecase = false
+    autocrlf = input
+    longpaths = true
 [http]
-	sslVerify = true
+    sslVerify = true
 [push]
     default = simple
 [github]
-	user = mizoguche
+    user = mizoguche
 [merge]
-	tool = opendiff
+    tool = opendiff
 [mergetool]
-	keepBackup = false
+    keepBackup = false
 [ghq]
-	root = ~/workspace/src
+    root = ~/workspace/src
 [diff]
-	compactionHeuristic = true
+    compactionHeuristic = true
 [http "https://gopkg.in"]
-	followRedirects = true
+    followRedirects = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
