@@ -42,6 +42,7 @@ brew "netpbm"
 brew "mysql"
 brew "gradle"
 brew "haskell-stack"
+brew "rename"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
