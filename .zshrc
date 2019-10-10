@@ -33,6 +33,8 @@ export PATH="$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH"
 
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
+export PATH=/usr/local/bin:$PATH
+
 
 bindkey -e
 bindkey "^[[3~" delete-char
