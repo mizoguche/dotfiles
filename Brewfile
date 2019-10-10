@@ -43,6 +43,7 @@ brew "mysql"
 brew "gradle"
 brew "haskell-stack"
 brew "rename"
+brew "terraform"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
