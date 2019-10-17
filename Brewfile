@@ -44,6 +44,7 @@ brew "gradle"
 brew "haskell-stack"
 brew "rename"
 brew "terraform"
+brew "swagger-codegen"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
