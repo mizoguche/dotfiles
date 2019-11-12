@@ -46,6 +46,8 @@ alias gls='gls --color'
 alias bi='bundle install --path=vendor/bundle -j8'
 alias be='bundle exec'
 
+alias git_delete_merged_branches="git branch --merged | grep -v '*' | xargs -I % git branch -d %"
+
 export EDITOR=vim        # エディタをvimに設定
 export LANG=ja_JP.UTF-8  # 文字コードをUTF-8に設定
 export KCODE=u           # KCODEにUTF-8を設定
