@@ -77,6 +77,7 @@ cask "blender"
 cask "unity-hub"
 cask "android-sdk"
 cask "android-platform-tools"
+cask "visual-studio-code"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
