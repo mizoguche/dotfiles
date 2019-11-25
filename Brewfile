@@ -46,6 +46,7 @@ brew "rename"
 brew "terraform"
 brew "swagger-codegen"
 brew "tfenv"
+brew "apktool"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
