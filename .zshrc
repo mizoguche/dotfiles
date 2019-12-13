@@ -3,6 +3,10 @@ then
   source ~/.zshenv
 fi
 
+# Homebrew
+export PATH="/usr/local/sbin:$PATH"
+export PATH=/usr/local/bin:$PATH
+
 # ruby
 export PATH=~/.rbenv/shims:$PATH
 export PATH="$HOME/.rbenv/shims:$PATH"
@@ -31,10 +35,6 @@ export GO111MODULE=on
 # Android
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 export PATH="$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH"
-
-# Homebrew
-export PATH="/usr/local/sbin:$PATH"
-export PATH=/usr/local/bin:$PATH
 
 
 bindkey -e
