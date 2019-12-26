@@ -47,6 +47,7 @@ brew "terraform"
 brew "swagger-codegen"
 brew "tfenv"
 brew "apktool"
+brew "bundletool"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
