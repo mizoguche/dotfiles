@@ -5,6 +5,9 @@
 **/.vscode/
 **/Editor/VSCode.cs*
 
+### Homebrew
+Brewfile.lock.json
+
 ### https://raw.github.com/github/gitignore/ad126218f6713611a7285b785947b53557b74681/Global/OSX.gitignore
 
 .DS_Store
