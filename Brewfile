@@ -48,6 +48,7 @@ brew "swagger-codegen"
 brew "tfenv"
 brew "apktool"
 brew "bundletool"
+brew "broot"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
