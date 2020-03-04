@@ -49,6 +49,7 @@ brew "tfenv"
 brew "apktool"
 brew "bundletool"
 brew "broot"
+brew "jq"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
