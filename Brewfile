@@ -43,7 +43,6 @@ brew "mysql"
 brew "gradle"
 brew "haskell-stack"
 brew "rename"
-brew "terraform"
 brew "swagger-codegen"
 brew "tfenv"
 brew "apktool"
@@ -83,6 +82,7 @@ cask "android-sdk"
 cask "android-platform-tools"
 cask "visual-studio-code"
 cask "ngrok"
+cask "vlc"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
