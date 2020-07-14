@@ -29,6 +29,9 @@
     ignorecase = false
     autocrlf = input
     longpaths = true
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
 [http]
     sslVerify = true
 [push]
@@ -50,3 +53,8 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[delta]
+    features = decorations
+    syntax-theme = Solarized (dark)
+    side-by-side = true
+    plus-style = syntax bold "#013300"

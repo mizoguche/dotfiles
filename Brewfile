@@ -49,6 +49,7 @@ brew "apktool"
 brew "bundletool"
 brew "broot"
 brew "jq"
+brew "git-delta"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
