@@ -169,3 +169,5 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^[' peco-src
+
+source /Users/mizoguche/Library/Preferences/org.dystroy.broot/launcher/bash/br
