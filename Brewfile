@@ -51,6 +51,7 @@ brew "broot"
 brew "jq"
 brew "git-delta"
 brew "swiftlint"
+brew "firebase-cli"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
