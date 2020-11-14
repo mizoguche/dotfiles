@@ -85,6 +85,7 @@ cask "android-platform-tools"
 cask "visual-studio-code"
 cask "ngrok"
 cask "vlc"
+cask "toggl-track"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
