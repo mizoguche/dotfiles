@@ -2,7 +2,6 @@ tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "heroku/brew"
-tap "AdoptOpenJDK/openjdk"
 
 # Packages
 brew "git"
