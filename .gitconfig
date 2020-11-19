@@ -58,3 +58,5 @@
     syntax-theme = Solarized (dark)
     side-by-side = true
     plus-style = syntax bold "#013300"
+[pull]
+	ff = only
