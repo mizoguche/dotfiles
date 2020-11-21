@@ -9,9 +9,6 @@ alias cdb='cd-bookmark'
 
 zplug "zsh-users/zsh-syntax-highlighting"
 
-# prompt
-zplug "nojhan/liquidprompt"
-
 # cd util
 zplug "knu/z"
 
