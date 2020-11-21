@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eux
 
 echo 'setup vim'
 

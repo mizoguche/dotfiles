@@ -1,11 +1,17 @@
 setup:
 	make brew
-	./02_setup_vim.sh
-	./03_setup_copy_dotfiles.sh
+	make vim
+	make symlink
 	defaults write com.apple.finder AppleShowAllFiles -bool YES
 	defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 	defaults write com.apple.finder QLEnableTextSelection -bool true
 	source ~/.zshrc
 
 brew:
-	./01_setup_homebrew.sh
+	./scripts/homebrew.sh
+
+symlink:
+	./scripts/create_symlink.sh
+
+vim:
+	./scripts/setup_vim.sh

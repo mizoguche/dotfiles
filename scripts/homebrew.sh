@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -eux
 
 # Install Homebrew
 if ! type brew; then
