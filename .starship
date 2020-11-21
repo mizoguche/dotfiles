@@ -1,3 +1,6 @@
+[directory]
+truncation_symbol = "…/"
+
 [line_break]
 disabled = true
 
