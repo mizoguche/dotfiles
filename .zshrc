@@ -31,6 +31,7 @@ eval "$(direnv hook zsh)"
 # Go
 export GOPATH=~/workspace
 export GO111MODULE=on
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Android
 export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
