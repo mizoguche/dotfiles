@@ -9,10 +9,10 @@ brew:
 	./scripts/homebrew.sh
 
 symlink:
-	./scripts/create_symlink.sh
+	./scripts/symlink.sh
 
 vim:
-	./scripts/setup_vim.sh
+	./scripts/vim.sh
 
 macos:
 	./scripts/macos.sh
