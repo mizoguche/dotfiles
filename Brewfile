@@ -51,6 +51,7 @@ brew "git-delta"
 brew "swiftlint"
 brew "firebase-cli"
 brew "starship"
+brew "mono"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk13"
@@ -82,6 +83,8 @@ cask "visual-studio-code"
 cask "ngrok"
 cask "vlc"
 cask "toggl-track"
+cask "vysor"
+cask "charles"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
