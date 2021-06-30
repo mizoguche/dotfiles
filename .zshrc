@@ -87,6 +87,10 @@ setopt nolistbeep
 # すべてのバックグラウンドジョブを低優先度で実行を解除
 unsetopt bg_nice
 
+
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
 # historyの設定
 # historical backward/forward search with linehead string binded to ^P/^N
 autoload history-search-end

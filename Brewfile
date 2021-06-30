@@ -86,6 +86,7 @@ cask "vlc"
 cask "toggl-track"
 cask "vysor"
 cask "charles"
+cask "google-cloud-sdk"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
