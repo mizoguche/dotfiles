@@ -54,6 +54,7 @@ brew "starship"
 brew "mono"
 
 cask "adoptopenjdk8"
+cask "adoptopenjdk11"
 cask "adoptopenjdk13"
 cask "google-chrome"
 cask "firefox"
