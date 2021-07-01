@@ -87,6 +87,7 @@ cask "toggl-track"
 cask "vysor"
 cask "charles"
 cask "google-cloud-sdk"
+cask "brave-browser"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
