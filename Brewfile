@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 tap "heroku/brew"
+tap "robotsandpencils/made"
 
 # Packages
 brew "git"
@@ -41,7 +42,6 @@ brew "mysql"
 brew "gradle"
 brew "haskell-stack"
 brew "rename"
-brew "swagger-codegen"
 brew "tfenv"
 brew "apktool"
 brew "bundletool"
@@ -52,6 +52,11 @@ brew "swiftlint"
 brew "firebase-cli"
 brew "starship"
 brew "mono"
+brew "openapi-generator"
+brew "robotsandpencils/made/xcodes"
+
+brew "awscli"
+cask "session-manager-plugin"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk11"
@@ -59,7 +64,6 @@ cask "adoptopenjdk13"
 cask "google-chrome"
 cask "firefox"
 cask "iterm2"
-cask "alfred"
 cask "bettertouchtool"
 cask "rescuetime"
 cask "dropbox"
@@ -73,8 +77,6 @@ cask "1password"
 cask "kindle"
 cask "send-to-kindle"
 cask "karabiner-elements"
-cask "sketch"
-cask "trailer"
 cask "vivaldi"
 cask "mysqlworkbench"
 cask "blender"
@@ -88,10 +90,11 @@ cask "vysor"
 cask "charles"
 cask "google-cloud-sdk"
 cask "brave-browser"
+cask "raycast"
+cask "figma"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
-mas "Xcode", id: 497799835
 mas "Todoist", id: 585829637
 mas "Desktop Calendar Plus", id: 524688159
 mas "Noizio", id: 928871589
