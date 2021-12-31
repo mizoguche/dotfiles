@@ -39,7 +39,6 @@ brew "ffmpeg"
 brew "heroku"
 brew "heroku-node"
 brew "kotlin"
-brew "gts"
 brew "jasper"
 brew "netpbm"
 brew "mysql"
@@ -55,7 +54,6 @@ brew "git-delta"
 brew "swiftlint"
 brew "firebase-cli"
 brew "starship"
-brew "mono"
 brew "openapi-generator"
 brew "robotsandpencils/made/xcodes"
 
@@ -67,31 +65,22 @@ cask "google-chrome"
 cask "firefox"
 cask "iterm2"
 cask "bettertouchtool"
-cask "rescuetime"
-cask "dropbox"
 cask "appcleaner"
-cask "google-backup-and-sync"
+cask "google-drive"
 cask "jetbrains-toolbox"
-cask "rescuetime"
 cask "slack"
 cask "docker"
 cask "1password"
 cask "kindle"
-cask "send-to-kindle"
 cask "karabiner-elements"
-cask "vivaldi"
 cask "mysqlworkbench"
 cask "blender"
 cask "unity-hub"
 cask "android-platform-tools"
 cask "visual-studio-code"
 cask "ngrok"
-cask "vlc"
-cask "toggl-track"
-cask "vysor"
 cask "charles"
 cask "google-cloud-sdk"
-cask "brave-browser"
 cask "raycast"
 cask "figma"
 cask "atok"
@@ -99,11 +88,8 @@ cask "atok"
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
 mas "Todoist", id: 585829637
-mas "Desktop Calendar Plus", id: 524688159
 mas "Noizio", id: 928871589
 mas "Microsoft Remote Desktop", id: 715768417
 mas "Giphy Capture", id: 668208984
 mas "Affinity Designer", id: 824171161
-mas "Skitch", id: 425955336
-mas "Amphetamine", id: 937984704
 mas "The Unarchiver", id: 425424353
