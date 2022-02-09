@@ -86,6 +86,7 @@ cask "google-cloud-sdk"
 cask "raycast"
 cask "figma"
 cask "atok"
+cask "brave-browser"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
