@@ -87,6 +87,8 @@ cask "raycast"
 cask "figma"
 cask "atok"
 cask "brave-browser"
+cask "devtoys"
+cask "miro"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
