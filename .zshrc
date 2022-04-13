@@ -6,6 +6,7 @@ fi
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/opt:$PATH
 
 # ruby
 export PATH=~/.rbenv/shims:$PATH
@@ -22,7 +23,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-18.jdk/Contents/Home/"
 
 # direnv
 eval "$(direnv hook zsh)"
