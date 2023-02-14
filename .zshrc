@@ -23,7 +23,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-18.jdk/Contents/Home/"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home/"
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -34,8 +34,15 @@ export GO111MODULE=on
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Android
-export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+export ANDROID_SDK_ROOT='/opt/homebrew/share/android-sdk'
 export PATH="$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH"
+## repo
+## https://android.googlesource.com/platform/frameworks/support/+/androidx-main/docs/onboarding.md#setup-linux-mac
+export PATH=~/bin:$PATH
+# Force repo to run with Python3
+function repo() {
+  command python3 ~/bin/repo $@
+}
 
 # Starship
 eval "$(starship init zsh)"
