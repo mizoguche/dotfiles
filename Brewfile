@@ -3,7 +3,6 @@ tap "homebrew/core"
 tap "homebrew/cask-versions"
 tap "homebrew/cask"
 
-tap "heroku/brew"
 tap "robotsandpencils/made"
 
 # Packages
@@ -37,8 +36,6 @@ brew "ghq"
 brew "zplug"
 brew "mas"
 brew "ffmpeg"
-brew "heroku"
-brew "heroku-node"
 brew "kotlin"
 brew "jasper"
 brew "netpbm"
@@ -58,7 +55,8 @@ brew "starship"
 brew "openapi-generator"
 brew "robotsandpencils/made/xcodes"
 brew "docker"
-brew "swiftformat"
+brew "aria2"
+brew "gh"
 
 brew "awscli"
 cask "session-manager-plugin"
@@ -89,7 +87,10 @@ cask "figma"
 cask "atok"
 cask "brave-browser"
 cask "devtoys"
-cask "temurin"
+cask "temurin8"
+cask "temurin11"
+cask "skitch"
+cask "warp"
 
 mas "LINE", id: 539883307
 mas "WinArchiver Lite", id: 414855915
@@ -99,3 +100,4 @@ mas "Microsoft Remote Desktop", id: 715768417
 mas "Giphy Capture", id: 668208984
 mas "Affinity Designer", id: 824171161
 mas "The Unarchiver", id: 425424353
+mas "AnDrop", id: 1452111498
