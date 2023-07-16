@@ -60,3 +60,5 @@
     plus-style = syntax bold "#013300"
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
