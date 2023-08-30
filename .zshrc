@@ -7,6 +7,7 @@ fi
 export PATH="/usr/local/sbin:$PATH"
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/opt:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 # ruby
 export PATH=~/.rbenv/shims:$PATH
