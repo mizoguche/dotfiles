@@ -1,9 +1,7 @@
 tap "homebrew/bundle"
-tap "homebrew/core"
 tap "homebrew/cask-versions"
-tap "homebrew/cask"
 
-tap "robotsandpencils/made"
+tap "xcodesorg/made"
 
 # Packages
 brew "git"
@@ -51,7 +49,7 @@ brew "git-delta"
 brew "firebase-cli"
 brew "starship"
 brew "openapi-generator"
-brew "robotsandpencils/made/xcodes"
+brew "xcodesorg/made/xcodes"
 brew "aria2"
 brew "gh"
 brew "awscli"
@@ -84,6 +82,8 @@ cask "devtoys"
 cask "skitch"
 cask "warp"
 cask "arc"
+cask "vlc"
+cask "figma"
 
 mas "LINE", id: 539883307
 mas "Todoist", id: 585829637
