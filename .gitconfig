@@ -20,6 +20,10 @@
     pullp = pull -p
     fetchp = fetch -p
     diffc = diff --cached
+[fetch]
+    prune = true
+    pruneTags = true
+    followTags = true
 [core]
     editor = vim -c \"set fenc=utf-8\"
     quotepath = false
@@ -36,8 +40,6 @@
     sslVerify = true
 [push]
     default = simple
-[github]
-    user = mizoguche
 [merge]
     tool = opendiff
 [mergetool]
