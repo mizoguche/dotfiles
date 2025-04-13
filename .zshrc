@@ -10,7 +10,6 @@ export PATH=/usr/local/opt:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 
 # ruby
-export PATH=~/.rbenv/shims:$PATH
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
 
@@ -44,6 +43,7 @@ export PATH=~/bin:$PATH
 function repo() {
   command python3 ~/bin/repo $@
 }
+$HOME/.sdkman/bin/sdkman-init.sh
 
 # Starship
 eval "$(starship init zsh)"
@@ -187,3 +187,7 @@ zle -N peco-src
 bindkey '^[' peco-src
 
 source /Users/mizoguche/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
