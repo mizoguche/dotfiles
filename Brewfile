@@ -94,6 +94,7 @@ cask "flutter"
 cask "linear-linear"
 cask "claude"
 cask "roam-research"
+cask "obsidian"
 
 mas "LINE", id: 539883307
 mas "Todoist", id: 585829637
